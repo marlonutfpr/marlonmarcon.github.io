@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlon Marcon - Personal Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <img src="assets/images/profile.jpg" alt="Marlon Marcon" class="rounded-circle mb-3" width="150" height="150">
+            <h1 class="display-4">Marlon Marcon</h1>
+            <p class="lead">AI Researcher | Vision Computing Enthusiast | Agriculture Innovator</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Marlon Marcon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#students">Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tutorials">Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section id="about" class="mb-5">
+            <h2>About</h2>
+            <p>
+               <strong> Professor at the Federal University of Technology - Paraná (UTFPR) - Dois Vizinhos Campus.</strong> <br />
+
+                Has experience in Computer Science with an emphasis on Computer Vision, Natural Language Processing (NLP), Machine Learning, Pattern Recognition and Applications. 
+                Main research areas include Machine Learning, Deep Learning, 2D and 3D Computer Vision.
+            </p>
+            <h3>Academic Background</h3>
+            <div class="accordion" id="academicBackground">
+                <!-- PhD -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingPhD">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhD" aria-expanded="false" aria-controls="collapsePhD">
+                            Ph.D. in Computer Science (2020)
+                        </button>
+                    </h2>
+                    <div id="collapsePhD" class="accordion-collapse collapse" aria-labelledby="headingPhD" data-bs-parent="#academicBackground">
+                        <div class="accordion-body">
+                            <strong>Institution:</strong> Federal University of Paraná (UFPR), Brazil<br>
+                            <strong>Exchange Period:</strong> University of Bologna<br>
+                            <strong>Thesis:</strong> 
+                            <a href="https://repositorio.utfpr.edu.br/jspui/bitstream/1/32123/1/learningunconstrainedobjectrecognition3Dmodeling.pdf" target="_blank">Novel deep learning methods applied for unconstrained visual object recognition and 3D modeling from point clouds</a><br>
+                            <strong>Advisor:</strong> 
+                            <a href="http://lattes.cnpq.br/9578832375902806" target="_blank">Luciano Silva</a><br>
+                            <strong>Co-advisor:</strong> 
+                            <a href="https://www.unibo.it/sitoweb/luigi.distefano" target="_blank">Luigi Di Stefano</a><br>
+                            <strong>Keywords:</strong> 3D Computer Vision, Unsupervised Learning, Knowledge Transfer, Spherical CNNs, Local Descriptors.
+                        </div>
+                    </div>
+                </div>
+                <!-- Master's -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingMasters">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
+                            Master's in Systems Engineering (2009)
+                        </button>
+                    </h2>
+                    <div id="collapseMasters" class="accordion-collapse collapse" aria-labelledby="headingMasters" data-bs-parent="#academicBackground">
+                        <div class="accordion-body">
+                            <strong>Institution:</strong> Federal University of Lavras (UFLA), Brazil<br>
+                            <strong>Thesis:</strong> 
+                            <a href="files/master-thesis.pdf" target="_blank">Estimation models of leaf area in a coffee tree unisg image analysis</a> <i>(In Portuguese)</i><br>
+                            <strong>Advisor:</strong> 
+                            <a href="http://lattes.cnpq.br/5933961538037309" target="_blank">Roberto Alves Braga Jr.</a><br>
+                            <strong>Keywords:</strong> Leaf area determination, Non-destructive methods, Indirect measurement.
+                        </div>
+                    </div>
+                </div>
+                <!-- Bachelor's -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingBachelors">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBachelors" aria-expanded="false" aria-controls="collapseBachelors">
+                            Bachelor's in Computer Science (2002 - 2006)
+                        </button>
+                    </h2>
+                    <div id="collapseBachelors" class="accordion-collapse collapse" aria-labelledby="headingBachelors" data-bs-parent="#academicBackground">
+                        <div class="accordion-body">
+                            <strong>Institution:</strong> State University of Western Paraná (UNIOESTE), Brazil<br>
+                            <strong>Thesis:</strong> 
+                            <a href="#" target="_blank">Word recognition in digital texts</a> <i>(In Portuguese)</i><br>
+                            <strong>Advisor:</strong> 
+                            <a href="http://lattes.cnpq.br/4617587198467560" target="_blank">André Luiz Brun</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <section id="skills" class="mb-5">
+            <h2>Skills</h2>
+            <p>Technologies and languages I use:</p>
+            <ul class="list-unstyled d-flex flex-wrap">
+                <li class="me-4 mb-2">
+                    <img src="assets/images/python.png" alt="Python" width="32"> Python
+                </li>
+                <li class="me-4 mb-2">
+                    <img src="assets/images/java.png" alt="Java" width="32"> Java
+                </li>
+                <li class="me-4 mb-2">
+                    <img src="assets/images/react.png" alt="React Native" width="32"> React Native
+                </li>
+                <li class="me-4 mb-2">
+                    <img src="assets/images/tensorflow.png" alt="TensorFlow" width="32"> TensorFlow
+                </li>
+                <li class="me-4 mb-2">
+                    <img src="assets/images/pytorch.png" alt="PyTorch" width="32"> PyTorch
+                </li>
+            </ul>
+        </section>
+
+        <section id="publications" class="mb-5">
+                <h2>Publications</h2>
+            
+                <h3>Journal Articles</h3>
+                <ul>
+                    <li><strong>Marcon, Marlon</strong>, Spezialetti, Riccardo, Salti, Samuele, Silva, Luciano, Di Stefano, Luigi. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Unsupervised Learning of Local Equivariant Descriptors for Point Clouds</a></em>. IEEE Transactions On Pattern Analysis And Machine Intelligence, v. 1, p. 1-1, 2021.</li>
+                    <li>Braga, Roberto A., González-Peña, Rolando J., <strong>Marcon, Marlon</strong>, Magalhães, Ricardo R., Paiva-Almeida, Thiago, Santos, Igor V.A., Martins, Moisés. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Phase-shifting of correlation fringes created by image processing as an alternative to improve digital shearography</a></em>. Optics Communications, v. 380, p. 114-123, 2016.</li>
+                    <li><strong>Marcon, Marlon</strong>, Brun, A.L., Bidarra, Jorge. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Desenvolvimento de uma ferramenta computacional para recuperação e correção de textos digitalizados</a></em>. Revista Brasileira de Computação Aplicada, v. 5, p. 71-83, 2013.</li>
+                    <li><strong>Marcon, Marlon</strong>, Mariano, Kleber, Braga Jr, Roberto Alves, Paglis, Carlos Maurício, Scalco, Myriani, Horgan, Graham William. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Estimation of total leaf area in perennial plants using image analysis</a></em>. Revista Brasileira de Engenharia Agrícola e Ambiental, v. 15, p. 96-101, 2011.</li>
+                    <li>Saúde, A.V., Victorio, R.A.S.S., Coutinho, G., <strong>Marcon, Marlon</strong>, Paiva, J.L., Damasceno, R.J. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Service Oriented Framework for Lightweight Enterprise Applications</a></em>. INFOCOMP, v. specia, p. 49-58, 2010.</li>
+                </ul>
+            
+                <h3>Book Chapters</h3>
+                <ul>
+                    <li><strong>Marcon, Marlon</strong>, Spezialetti, Riccardo, Salti, Samuele, Silva, Luciano, Di Stefano, Luigi. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Boosting Object Recognition in Point Clouds by Saliency Detection</a></em>. Lecture Notes in Computer Science. Cham: Springer International Publishing, 2019. v. 11808, p. 321-331.</li>
+                    <li><strong>Marcon, Marlon</strong>, Braga Jr, Roberto Alves. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Didatic dynamic speckle softwares</a></em>. In: Hector J. Rabal, Roberto Alves Braga Jr. (Org.). <em>Dinamic Laser Speckle and Applications</em>. Boca Raton, FL: Taylor & Francis CRC, 2008. v. 1, p. 233-246.</li>
+                </ul>
+            
+                <h3>Conference Papers</h3>
+                <ul>
+                    <li>Oliveira, B.D., Ortoncelli, A.R., Beal, F., <strong>Marcon, Marlon</strong>. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Bass Learning Tool: Ferramenta Interativa para Aprendizado de Contrabaixo com Feedback em Tempo Real</a></em>. XXXV Simpósio Brasileiro de Informática na Educação (SBIE 2024), 2024.</li>
+                    <li>S.F. Skura, <strong>Marcon, Marlon</strong>, Beal, F. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Desafios sobre Acessibilidade em Ferramentas CASE</a></em>. XXXV Simpósio Brasileiro de Informática na Educação (SBIE 2024), 2024.</li>
+                    <li>Lima, I., Ortoncelli, A.R., <strong>Marcon, Marlon</strong>. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Analyzing Bee Behavior Through Video Tracking Using Computer Vision Techniques</a></em>. XIX Workshop de Visão Computacional (WVC 2024), 2024.</li>
+                    <li>Vasconcelos, G., Ortoncelli, A.R., <strong>Marcon, Marlon</strong>. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Deep Semantic Segmentation Applied to Honey Bee Comb Cells</a></em>. XIX Workshop de Visão Computacional (WVC 2024), 2024.</li>
+                    <li>Souza, L.L., Beal, F., Ortoncelli, A.R., <strong>Marcon, Marlon</strong>. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Detection and Censorship of Offensive Language in Extended Texts in Portuguese</a></em>. 15th Symposium in Information and Human Language Technology (STIL 2024), 2024.</li>
+                    <li>Lima, C.E., <strong>Marcon, Marlon</strong>, Ortoncelli, A.R., Beal, F. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Desenvolvimento de uma Interface Tangível de Usuário para Auxílio de Estudantes Cegos em Conteúdos de Disciplinas da Computação</a></em>. Simpósio Brasileiro de Informática na Educação, 2023.</li>
+                    <li><strong>Marcon, Marlon</strong>, Ortoncelli, A.R. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Object Recognition to Support Navigation Systems for Blind in Uncontrolled Environments</a></em>. Computer on the Beach, 2022.</li>
+                    <li><strong>Marcon, Marlon</strong>, Bellon, O.R.P., Silva, L. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Towards real-time object recognition and pose estimation in point clouds</a></em>. International Conference on Computer Vision Theory and Applications, 2021.</li>
+                    <li>Ortoncelli, A.R., <strong>Marcon, Marlon</strong>, Beal, F. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">An Automated Approach to Mitigate Transcription Errors in Braille Texts for the Portuguese Language</a></em>. Computer on the Beach, 2021.</li>
+                    <li>Silveira, M.J., Marasca, A.L., <strong>Marcon, Marlon</strong>, Ortoncelli, A.R. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Priorização de atividades de desenvolvimento de software com uma Rede Neural Artificial</a></em>. Computer on the Beach 2020, 2020.</li>
+                    <li>Spezialetti, R., Stella, F., <strong>Marcon, Marlon</strong>, Silva, L., Salti, S., Di Stefano, L. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Learning to Orient Surfaces by Self-supervised Spherical CNNs</a></em>. NeurIPS, 2020.</li>
+                    <li><strong>Marcon, Marlon</strong>, Spezialetti, R., Salti, S., Silva, L., Di Stefano, L. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Boosting Object Recognition in Point Clouds by Saliency Detection</a></em>. International Conference on Image Analysis and Processing, 2019.</li>
+                    <li>PAVAN, F.R.; <strong>MARCON, Marlon</strong>; POTRICH, M. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Desenvolvimento de software para a análise da movimentação de insetos por meio de Visão Computacional</a></em>. In: I Simpósio de Engenharia de Software da UTFPR-DV, 2017, Dois Vizinhos. Anais do 1º Simpósio de Engenharia de Software da UTFPR-DV (SimES 2017), 2017.</li>
+                    <li>PAVAN, D.R.; KRASSMANN, J.F.; <strong>MARCON, Marlon</strong>. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Reconhecimento de objetos 3D em ambientes não controlados</a></em>. In: I Simpósio de Engenharia de Software da UTFPR-DV, 2017, Dois Vizinhos. Anais do 1o Simpósio de Engenharia de Software da UTFPR-DV (SimES 2017), 2017.</li>
+                    <li>BRUN, A.L.; KIEL, G.; <strong>MARCON, Marlon</strong>. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Aplicação do Processamento de Imagens Digitais na Melhoria de Imagens Microbiológicas</a></em>. In: Encontro Paranaense de Computação, 2007, Cascavel. Anais do II Encontro Paranaense de Computação - EPAC, 2007.</li>
+                    <li><strong>MARCON, Marlon</strong>; BRUN, A.L. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Utilização de Técnicas de Realce e do Histograma de Projeção na Segmentação de Caracteres</a></em>. In: III Seminário de computação de Londrina, 2006, Londrina. Anais do III Seminário de Computação de Londrina, 2006.</li>
+                    <li>BIDARRA, Jorge; FOLADOR, E. L.; CAVASIN, Rodrigo José; <strong>MARCON, Marlon</strong>. <em><a href="https://doi.org/10.xxxx/xxxx" target="_blank">Um Léxico Eletrônico para a Língua Portuguesa: xLISTAS</a></em>. In: Encontro Paranaense de computação, 2005, Cascavel. Anais do I Encontro Paranaense de Computação, 2005.</li>
+                </ul>
+            
+            </section>
+            
+            
+
+        <section id="students" class="mb-5">
+                <h2>Students</h2>
+                
+                <h3>Dissertation and Thesis Supervisions</h3>
+                <ul>
+                    <li><strong>Federico Stella</strong>. "Learning a Local Reference Frame for Point Clouds using Spherical CNNs". 2020. Dissertation (Master's in Corso di Studio in Ingegneria informatica) - Università di Bologna. Co-supervisor: Marlon Marcon.</li>
+                </ul>
+            
+                <h3>Specialization Thesis Supervisions</h3>
+                <ul>
+                    <li><strong>Manoela Silva Siqueira</strong>. "A importância da alimentação saudável no desenvolvimento infantil". 2012. Thesis. (Specialization in Produção de Material Didático para a Diversidade) - Universidade Federal de Lavras. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Eliane Septímo Murta</strong>. "Educação para o trânsito e Física: Uma questão de direitos humanos". 2012. Thesis. (Specialization in Produção de Material Didático para a Diversidade) - Universidade Federal de Lavras. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Sandra Helena Eugênio</strong>. "Uso de um blog para incentivar a leitura nos anos iniciais do ensino fundamental". 2012. Thesis. (Specialization in Produção de Material Didático para a Diversidade) - Universidade Federal de Lavras. Supervisor: Marlon Marcon.</li>
+                </ul>
+            
+                <h3>Undergraduate Thesis Supervisions</h3>
+                <ul>
+                    <li><strong>Bruno Dewes Oliveira</strong>. "Ferramenta para aprendizado musical de contrabaixo". 2024. Thesis. (Specialization in Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Guilherme Luiz Pissaia</strong>. "Reconhecimento de objetos em imagens RGB-D visando estimativa da pose em tempo real". 2024. Thesis. (Specialization in Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Omar Jose da Silva Junior</strong>. "Proposta de uma solução móvel de baixo custo para sistemas de reconhecimento de objetos". 2024. Thesis. (Specialization in Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Vinicius de Almeida Freitas</strong>. "Aplicação de técnicas de visão computacional para análise comportamental de animais em confinamento". 2024. Thesis. (Specialization in Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Ian Carlos Rocha Lima</strong>. "Rastreamento e análise comportamental de abelhas em vídeos por meio de Visão Computacional". 2023. Undergraduate Thesis. (Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Lucas Bonato</strong>. "Detecção e classificação de conteúdos ofensivos em comentários relacionados a jogos eletrônicos". 2023. Undergraduate Thesis. (Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Yasmin Barbara Novello</strong>. "Reconhecimento de impressões digitais latentes por meio de visão computacional". 2023. Undergraduate Thesis. (Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Lucas Lenoch De Souza</strong>. "Detecção e Censura de Linguagem Ofensiva para Textos Grandes em Português". 2023. Undergraduate Thesis. (Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Douglas Wender Lopes de Oliveira</strong>. "Utilização de API para geolocalização em tempo real de encomendas pedidas por meio de aplicativo mobile multiplataforma". 2022. Undergraduate Thesis. (Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Marco Antônio Martins</strong>. "Combinação de técnicas de análise de sentimentos de tweets e dados históricos para previsão de cotação de criptomoedas". 2022. Undergraduate Thesis. (Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Messias Antonio da Rosa Junior</strong>. "Uso da arquitetura YOLO para reconhecimento de textos Braille". 2022. Undergraduate Thesis. (Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Gustavo Dos Santos Vasconcelos</strong>. "Uso da arquitetura YOLO para reconhecimento de textos Braille". 2022. Undergraduate Thesis. (Software Engineering) - Universidade Tecnológica Federal do Paraná. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Janayna Pereira de Paula</strong>. "Utilização do CMS Drupal para desenvolvimento de um website institucional". 2015. Undergraduate Thesis. (Analysis and Development of Systems) - Instituto Federal Minas Gerais. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Helton John Moreira</strong>. "Sistemas para gerenciamento de documentos: Um estudo de caso da ferramenta Alfresco". 2015. Undergraduate Thesis. (Analysis and Development of Systems) - Instituto Federal Minas Gerais. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Fausto Tadeu Nogueira Alves</strong>. "Desenvolvimento de uma loja virtual de produtos e serviços de turismo por meio de frameworks ágeis em desenvolvimento de sistemas web". 2014. Undergraduate Thesis. (Analysis and Development of Systems) - Instituto Federal Minas Gerais. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Bianca Vilela de Souza</strong>. "Desenvolvimento de um guia on-line Utilizando um sistema de gerenciamento de conteúdo (CMS)". 2014. Undergraduate Thesis. (Analysis and Development of Systems) - Instituto Federal Minas Gerais. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Fernanda Silva Alves</strong>. "DESENVOLVIMENTO DE SISTEMAS UTILIZANDO FRAMEWORKS: UM ESTUDO DE CASO UTILIZANDO O JAGUAR PARA CRIAÇÃO DE UM SISTEMA COMERCIAL". 2012. Undergraduate Thesis. (Analysis and Development of Systems) - Instituto Federal Minas Gerais. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Guilherme José Ramos Corrêa</strong>. "Desenvolvimento de uma aplicação web para comércio eletrônico C2C para utilização em instituições de ensino". 2011. Undergraduate Thesis. (Technology in Analysis and Development of Systems) - Instituto Federal Minas Gerais. Supervisor: Marlon Marcon.</li>
+                </ul>
+            
+                <h3>Scientific Initiation</h3>
+                <ul>
+                    <li><strong>Bruno Alberto Soares Oliveira</strong>. "Desenvolvimento de um Sistema de Visão Computacional para Auxiliar a Locomoção de Deficientes Visuais". 2014. Scientific Initiation. (Undergraduate in Computer Engineering) - Instituto Federal Minas Gerais. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Servílio Souza de Assis</strong>. "Desenvolvimento de um Sistema de Visão Computacional para Auxiliar a Locomoção de Deficientes Visuais". 2014. Scientific Initiation. (Undergraduate in Computer Engineering) - Instituto Federal Minas Gerais, Conselho Nacional de Desenvolvimento Científico e Tecnológico. Supervisor: Marlon Marcon.</li>
+                    <li><strong>Izadora Aparecida Ramos</strong>. "Desenvolvimento de um Sistema de Visão Computacional para Auxiliar a Locomoção de Deficientes Visuais". 2014. Scientific Initiation. (Undergraduate in Computer Engineering) - Instituto Federal Minas Gerais. Supervisor: Marlon Marcon.</li>
+                </ul>
+            
+            </section>
+            
+
+        <!-- <section id="tutorials" class="mb-5">
+            <h2>Tutorials</h2>
+            <p>Learn with me! Check out my tutorials:</p>
+            <ul>
+                <li><a href="#">Building AI Models for Agriculture</a></li>
+                <li><a href="#">Training Large Language Models for Custom Applications</a></li>
+            </ul>
+        </section> -->
+
+        <section id="contact" class="mb-5">
+            <h2>Contact</h2>
+            <p>Feel free to reach out through the platforms below:</p>
+            <ul class="list-unstyled">
+                <li>
+                    <img src="assets/images/email.png" alt="Email" width="24">
+                    <a href="mailto:johndoe@example.com">johndoe@example.com</a>
+                </li>
+                <li>
+                    <img src="assets/images/linkedin.png" alt="LinkedIn" width="24">
+                    <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a>
+                </li>
+                <li>
+                    <img src="assets/images/github.png" alt="GitHub" width="24">
+                    <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; <span id="current-year"></span> Marlon Marcon. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Dynamically set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
