@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo de Fechamento do TCC - UTFPR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 1.1em;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .step {
+            position: relative;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        .step:nth-child(1) { animation-delay: 0.1s; }
+        .step:nth-child(2) { animation-delay: 0.2s; }
+        .step:nth-child(3) { animation-delay: 0.3s; }
+        .step:nth-child(4) { animation-delay: 0.4s; }
+        .step:nth-child(5) { animation-delay: 0.5s; }
+        .step:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .step-content {
+            width: 45%;
+            padding: 25px;
+            background: #f7fafc;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .step-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .step:nth-child(odd) .step-content {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .step:nth-child(even) .step-content {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            z-index: 10;
+        }
+
+        .step-title {
+            color: #2d3748;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-icon {
+            font-size: 1.5em;
+        }
+
+        .step-description {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .step-details {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #667eea;
+            display: none;
+        }
+
+        .step-details.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                max-height: 0;
+            }
+            to {
+                opacity: 1;
+                max-height: 500px;
+            }
+        }
+
+        .step-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .step-details li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .step-details li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        .important-note {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            color: #742a2a;
+        }
+
+        .deadline {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            color: #7d6608;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+        }
+
+        .expand-hint {
+            color: #667eea;
+            font-size: 0.9em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .step-content {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+            }
+
+            .step-number {
+                left: 30px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Processo de Fechamento do TCC</h1>
+            <p class="subtitle">Universidade Tecnológica Federal do Paraná - UTFPR</p>
+        </header>
+
+        <div class="timeline">
+            <!-- Passo 1 -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content" onclick="toggleDetails(this)">
+                    <div class="step-title">
+                        <span class="step-icon">🎯</span>
+                        Defesa e Aprovação
+                    </div>
+                    <div class="step-description">
+                        Realize sua defesa perante a banca examinadora e obtenha aprovação.
+                    </div>
+                    <p class="expand-hint">Clique para ver mais detalhes</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Apresente seu trabalho para a banca examinadora</li>
+                            <li>Responda às questões levantadas pelos avaliadores</li>
+                            <li>Aguarde a deliberação da banca</li>
+                            <li>Sua aprovação é fundamental para prosseguir</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passo 2 -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <div
+class="step-content" onclick="toggleDetails(this)">
+                    <div class="step-title">
+                        <span class="step-icon">📝</span>
+                        Termo de Usuário Externo do SEI
+                    </div>
+                    <div class="step-description">
+                        Assine o Termo de Usuário Externo do SEI para viabilizar o processo.
+                    </div>
+                    <p class="expand-hint">Clique para ver mais detalhes</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Você (aluno/a) deve assinar o Termo de Usuário Externo do SEI</li>
+                            <li>As orientações foram enviadas para o e-mail cadastrado no Portal do Aluno</li>
+                            <li>Este termo é necessário para que a ata seja composta</li>
+                        </ul>
+                        <div class="important-note">
+                            <strong>⚠️ Importante:</strong> Verifique sua caixa de entrada e spam para localizar as orientações.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passo 3 -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content" onclick="toggleDetails(this)">
+                    <div class="step-title">
+                        <span class="step-icon">📋</span>
+                        Cadastro de Documentos no SEI
+                    </div>
+                    <div class="step-description">
+                        Seu orientador cadastrará a Ata e o Termo de Aprovação no SEI.
+                    </div>
+                    <p class="expand-hint">Clique para ver mais detalhes</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>O orientador cadastra a Ata de Defesa no SEI</li>
+                            <li>O orientador cadastra o Termo de Aprovação no SEI</li>
+                            <li>Processo SEI: <strong>23064.059264/2025-97</strong></li>
+                            <li>O orientador também é responsável por cadastrar membros avaliadores externos no SEI</li>
+                        </ul>
+                        <div class="important-note">
+                            <strong>📌 Nota:</strong> Esta etapa é de responsabilidade do orientador.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passo 4 -->
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content" onclick="toggleDetails(this)">
+                    <div class="step-title">
+                        <span class="step-icon">✍️</span>
+                        Assinatura dos Documentos
+                    </div>
+                    <div class="step-description">
+                        Ata e Termo devem ser assinados pelos responsáveis.
+                    </div>
+                    <p class="expand-hint">Clique para ver mais detalhes</p>
+                    <div class="step-details">
+                        <ul>
+                            <li><strong>Ata de Defesa:</strong> Deve ser assinada por todos os membros da banca E pelo estudante</li>
+                            <li><strong>Termo de Aprovação:</strong> Deve ser assinado SOMENTE pelos membros da banca</li>
+                            <li>Membros externos assinam via e-mail</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passo 5 -->
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content" onclick="toggleDetails(this)">
+                    <div class="step-title">
+                        <span class="step-icon">📄</span>
+                        Adequação às Normas e Entrega no SIACOES
+                    </div>
+                    <div class="step-description">
+                        Formate seu TCC conforme as normas e envie no SIACOES.
+                    </div>
+                    <p class="expand-hint">Clique para ver mais detalhes</p>
+                    <div class="step-details">
+                        <ul>
+                            <li>Utilize os modelos oficiais: <strong>Monografia, Artigo ou Relatório Técnico</strong></li>
+                            <li>Baixe os templates em: <a href="https://coens.dv.utfpr.edu.br/site/curso/tcc/" target="_blank">https://coens.dv.utfpr.edu.br/site/curso/tcc/</a></li>
+                            <li>Consulte o checklist de formatação anexo ao e-mail</li>
+                            <li>Envie a versão final no SIACOES</li>
+                            <li>Aguarde a validação do seu orientador</li>
+                        </ul>
+                        <div class="deadline">
+                            <strong>⏰ PRAZO IMPRORROGÁVEL:</strong> A versão final deve ser validada pelo orientador até <strong>15/12</strong>. Caso contrário, a nota não será lançada no Portal do Aluno.
+                        </div>
+                        <div class="important-note">
+                            <strong>⚠️ Responsabilidade:</strong> O orientador é responsável pela validação da formatação. Se a biblioteca identificar erros, o orientador deverá corrigir e reenviar.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passo 6 -->
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content" onclick="toggleDetails(this)">
+                    <div class="step-title">
+                        <span class="step-icon">📊</span>
+                        Preenchimento do Formulário
+                    </div>
+                    <div class="step-description">
+                        Complete o formulário final para concluir o processo.
+                    </div>
+                    <p class="expand-hint">Clique para ver mais detalhes</p>
+                    <div class="step-details">
+                        <ul>
+                            <li
+>Preencha o formulário específico de conclusão</li>
+                            <li>Forneça todas as informações solicitadas</li>
+                            <li>Este é o último passo para regularizar sua situação acadêmica</li>
+                        </ul>
+                        <a href="https://forms.gle/dkGt2gdH5tqRgD9A7" target="_blank" class="cta-button">
+                            📝 Acessar Formulário
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Em caso de dúvidas, consulte seu orientador ou o PRATCC (<a href="mailto:pratcc-coens-dv@utfpr.edu.br" style="color: #667eea; text-decoration: none;">pratcc-coens-dv@utfpr.edu.br</a>).</strong></p>
+            <p style="margin-top: 15px; font-size: 1.1em;"><strong>Universidade Tecnológica Federal do Paraná - UTFPR</strong></p>
+            <p style="margin-top: 5px;">Campus Dois Vizinhos</p>
+            <p style="margin-top: 5px;">Bacharelado em Engenharia de Software</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(element) {
+            const details = element.querySelector('.step-details');
+            const allDetails = document.querySelectorAll('.step-details');
+            
+            // Fecha todos os outros detalhes
+            allDetails.forEach(detail => {
+                if (detail !== details && detail.classList.contains('active')) {
+                    detail.classList.remove('active');
+                }
+            });
+            
+            // Toggle do detalhe clicado
+            details.classList.toggle('active');
+            
+            // Adiciona efeito de destaque
+            element.style.background = details.classList.contains('active') 
+                ? 'linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%)' 
+                : '#f7fafc';
+        }
+
+        // Animação de entrada suave
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.step').forEach((step, index) => {
+                setTimeout(() => {
+                    step.style.opacity = '1';
+                    step.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Adiciona interatividade ao passar o mouse
+        document.querySelectorAll('.step-content').forEach(content => {
+            content.addEventListener('mouseenter', function() {
+                if (!this.querySelector('.step-details').classList.contains('active')) {
+                    this.style.background = '#edf2f7';
+                }
+            });
+            
+            content.addEventListener('mouseleave', function() {
+                if (!this.querySelector('.step-details').classList.contains('active')) {
+                    this.style.background = '#f7fafc';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
